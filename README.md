@@ -56,3 +56,22 @@ curl -X 'GET' \
   'http://localhost:8085/api/personnes/1' \
   -H 'accept: */*'
 ```
+
+Update personne :
+```bash
+curl -X 'PUT' \
+  'http://localhost:8085/api/personnes/1' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "firstName": "new-first-name",
+  "lastName": "new-last-name"
+}'
+```
+
+Delete personne
+```bash
+curl -X 'DELETE' \
+  'http://localhost:8085/api/personnes/1' \
+  -H 'accept: */*' 
+```
